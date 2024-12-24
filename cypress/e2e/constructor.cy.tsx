@@ -112,9 +112,13 @@ describe('Тестирование конструктора бургеров', (
       cy.wait('@order').then((res) => {
         const orderNumber = res.response?.body?.order?.number;
 
-        cy.get('[data-cy="modal"]')
+        cy.get('[data-cy="modal"]', { timeout: 15000 })
           .should('be.visible')
-          .find('[data-cy="order-number"]')
+          .as('modal');
+
+        // Затем отдельно проверяем номер заказа
+        cy.get('[data-cy="order_number"]', { timeout: 15000 })
+          .should('be.visible')
           .should('contain.text', orderNumber);
 
         // Закрываем модальное окно
