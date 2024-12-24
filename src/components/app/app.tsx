@@ -15,9 +15,9 @@ import styles from './app.module.css';
 import { AppHeader, Modal, OrderInfo, IngredientDetails } from '@components';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { getIngredientsList } from '../../services/slices/ingredients-slice';
+import { getIngredientsList } from '../../services/slices/ingredients-slice/ingredients-slice';
 import { useDispatch } from '../../services/store';
-import { apiGetUser } from '../../services/slices/user-slice';
+import { apiGetUser } from '../../services/slices/user-slice/user-slice';
 import { ProtectedRoute } from '../protected-route/protected-route';
 
 const App = () => {

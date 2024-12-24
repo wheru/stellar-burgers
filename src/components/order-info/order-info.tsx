@@ -7,7 +7,7 @@ import { TIngredient, TOrder } from '@utils-types';
 import { Preloader } from '../ui/preloader';
 import { OrderInfoUI } from '../ui/order-info';
 import { useSelector } from '../../services/store';
-import { getIngredients } from '../../services/slices/ingredients-slice';
+import { getIngredients } from '../../services/slices/ingredients-slice/ingredients-slice';
 
 interface OrderData extends Omit<TOrder, 'ingredients'> {
   ingredients: string[];

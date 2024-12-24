@@ -3,17 +3,21 @@ import { TConstructorIngredient } from '@utils-types';
 import { BurgerConstructorUI } from '@ui';
 import { useDispatch, useSelector } from '../../services/store';
 import {
+  addItem,
+  deleteItem,
   clearAll,
+  updateAll,
+  constructorSlice,
   constructorSelector
-} from '../../services/slices/constructor-slice';
+} from '../../services/slices/constructor-slice/constructor-slice';
 import {
   getOrderModalData,
   getOrderRequest,
   newOrder,
   resetOrder
-} from '../../services/slices/new-order-slice';
+} from '../../services/slices/new-order-slice/new-order-slice';
 import { useNavigate } from 'react-router-dom';
-import { isAuthCheckedSelector } from '../../services/slices/user-slice';
+import { isAuthCheckedSelector } from '../../services/slices/user-slice/user-slice';
 export const BurgerConstructor: FC = () => {
   const dispatch = useDispatch();
   const nav = useNavigate();

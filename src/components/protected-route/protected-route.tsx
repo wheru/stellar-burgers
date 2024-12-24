@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Navigate, useLocation, Location, useNavigate } from 'react-router-dom';
 import { useSelector } from '../../services/store';
-import { isAuthCheckedSelector } from '../../services/slices/user-slice';
+import { isAuthCheckedSelector } from '../../services/slices/user-slice/user-slice';
 
 type ProtectedRouteProps = {
   nonAuth?: boolean;

@@ -4,19 +4,19 @@ import {
   useDispatch as dispatchHook,
   useSelector as selectorHook
 } from 'react-redux';
-import { ingredientsSlice } from './slices/ingredients-slice';
-import { constructorSlice } from './slices/constructor-slice';
-import { newOrderSlice } from './slices/new-order-slice';
-import { userSlice } from './slices/user-slice';
-import { feedsSlice } from './slices/feeds-slice';
-import { userOrdersSlice } from './slices/user-all-orders-slice';
+import { ingredientsSlice } from './slices/ingredients-slice/ingredients-slice';
+import { constructorSlice } from './slices/constructor-slice/constructor-slice';
+import { newOrderSlice } from './slices/new-order-slice/new-order-slice';
+import { userSlice } from './slices/user-slice/user-slice';
+import { feedsSlice } from './slices/feeds-slice/feeds-slice';
+import { userOrdersSlice } from './slices/user-all-orders-slice/user-all-orders-slice';
 
-const rootReducer = {
+export const rootReducer = {
   [ingredientsSlice.name]: ingredientsSlice.reducer,
   [constructorSlice.name]: constructorSlice.reducer,
+  [feedsSlice.name]: feedsSlice.reducer,
   [newOrderSlice.name]: newOrderSlice.reducer,
   [userSlice.name]: userSlice.reducer,
-  [feedsSlice.name]: feedsSlice.reducer,
   [userOrdersSlice.name]: userOrdersSlice.reducer
 };
 

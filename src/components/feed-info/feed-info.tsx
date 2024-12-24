@@ -6,7 +6,7 @@ import {
   getOrdersFeeds,
   getTotalFeeds,
   getTotalTodayFeeds
-} from '../../services/slices/feeds-slice';
+} from '../../services/slices/feeds-slice/feeds-slice';
 
 const getOrders = (orders: TOrder[], status: string): number[] =>
   orders
@@ -21,13 +21,13 @@ export const FeedInfo: FC = () => {
 
   const readyOrders = getOrders(orders, 'done');
   const pendingOrders = getOrders(orders, 'pending');
-  const feeds = { total: totalFeeds, totalToday: totalToday };
+  const feed = { total: totalFeeds, totalToday: totalToday };
 
   return (
     <FeedInfoUI
       readyOrders={readyOrders}
       pendingOrders={pendingOrders}
-      feed={feeds}
+      feed={feed}
     />
   );
 };

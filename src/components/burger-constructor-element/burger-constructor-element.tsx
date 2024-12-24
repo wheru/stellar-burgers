@@ -5,7 +5,7 @@ import {
   constructorSelector,
   deleteItem,
   updateAll
-} from '../../services/slices/constructor-slice';
+} from '../../services/slices/constructor-slice/constructor-slice';
 import { useDispatch, useSelector } from '../../services/store';
 import { TConstructorIngredient } from '@utils-types';
 
